@@ -26,7 +26,6 @@ cleanup:
     # rm -rf objects/
     rm nim/stager.exe
     rm go/go-stager.exe
-    rm nim/main_build.nim
 
 
 all: replace format rust nim go organize cleanup replace
