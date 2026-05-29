@@ -1,4 +1,4 @@
-[working-directory: 'go-stager']
+[working-directory: 'go']
 go:
     GOOS=windows GOARCH=amd64 GOROOT=/usr/lib/go-1.22 go build -o go-stager.exe stager.go
     cp go-stager.exe ../
@@ -20,6 +20,6 @@ format:
 cleanup:
     # rm -rf objects/
     rm rust/stager/src/main_build.rs nim/main_build.nim nim/main_build.exe
-    rm go-stager/go-stager.exe
+    rm go/go-stager.exe
 
 all: format rust nim go organize cleanup
