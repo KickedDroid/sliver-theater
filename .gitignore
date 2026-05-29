@@ -6,3 +6,5 @@ objects/rust-stager.exe
 # Added by cargo
 
 /target
+rust/stager/target
+rust/stager/Cargo.lock

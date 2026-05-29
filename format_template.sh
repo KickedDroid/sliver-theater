@@ -12,6 +12,6 @@ sed -i "s/___TARGET___/$TARGET/g" nim/main_build.nim
 
 
 # --- FOR RUST ---
-cp rust/showtoon/templates/template.rs rust/showtoon/src/main_build.rs
-sed -i "s/___TARGET___/$TARGET/g" rust/showtoon/src/main_build.rs
-cp rust/showtoon/src/main_build.rs rust/showtoon/src/main.rs
+cp rust/stager/templates/template.rs rust/stager/src/main_build.rs
+sed -i "s/___TARGET___/$TARGET/g" rust/stager/src/main_build.rs
+cp rust/stager/src/main_build.rs rust/stager/src/main.rs

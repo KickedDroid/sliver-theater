@@ -7,8 +7,8 @@ go:
 	cp go-stager/go-stager.exe ./
 
 rust:
-	cd rust/showtoon && cargo build --release --target x86_64-pc-windows-gnu
-	cp rust/showtoon/target/x86_64-pc-windows-gnu/release/showtoon.exe ./rust-stager.exe
+	cd rust/stager && cargo build --release --target x86_64-pc-windows-gnu
+	cp rust/stager/target/x86_64-pc-windows-gnu/release/stager.exe ./rust-stager.exe
 
 nim:
 	nim c -d:mingw --os:windows --cpu:amd64 --cc:gcc --gcc.exe:x86_64-w64-mingw32-gcc --gcc.linkerexe:x86_64-w64-mingw32-gcc nim/main_build.nim
@@ -23,5 +23,5 @@ format:
 
 cleanup:
 	# rm -rf objects/
-	rm -f rust/showtoon/src/main_build.rs nim/main_build.nim nim/main_build.exe
+	rm -f rust/stager/src/main_build.rs nim/main_build.nim nim/main_build.exe
 	rm -f go-stager/go-stager.exe
