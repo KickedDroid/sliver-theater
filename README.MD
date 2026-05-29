@@ -1,6 +1,10 @@
 
 ### Building 
 
+```
+mkdir -p rust && cd rust && git clone https://github.com/KickedDroid/sliver-theater.git
+```
+
 With `just`
 
 ```
