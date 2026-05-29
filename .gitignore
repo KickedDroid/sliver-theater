@@ -1,0 +1,8 @@
+objects/go-stager.exe
+objects/nim-stager.exe
+objects/rust-stager.exe
+
+
+# Added by cargo
+
+/target
