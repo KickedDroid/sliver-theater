@@ -12,7 +12,7 @@ just all
 With `make`
 
 ```
-make
+make all
 ```
 
 ### Usage
