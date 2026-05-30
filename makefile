@@ -1,6 +1,6 @@
 .PHONY: all go rust nim organize format cleanup
 
-all: format rust nim go organize cleanup
+all: replace format rust nim go organize cleanup replace
 
 go:
 	cd go-stager && GOOS=windows GOARCH=amd64 GOROOT=/usr/lib/go-1.22 go build -o go-stager.exe stager.go
@@ -17,6 +17,11 @@ nim:
 organize:
 	mkdir -p objects
 	mv nim-stager.exe rust-stager.exe go-stager.exe objects/
+
+replace:
+    cp templates/template.go go/stager.go
+    cp templates/template.rs rust/stager/src/main.rs
+    cp templates/template.nim nim/stager.nim
 
 format:
 	bash ./format_template.sh
