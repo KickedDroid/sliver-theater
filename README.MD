@@ -3,16 +3,10 @@ Thank you Tyler for inspiring me for this repo https://github.com/TeneBrae93/def
 
 ### Building 
 
-With `just`
+The options are `nim`, `go` and `rust`
 
 ```
-just all
-```
-
-With `make`
-
-```
-make all
+./gen.sh all IP PORT
 ```
 
 ### Usage
