@@ -1,18 +1,11 @@
 
-Thank you Tyler for inspiring me for this repo https://github.com/TeneBrae93/defender_bypass_with_sliver/blob/main/builder.py
 
 ### Building 
 
-With `just`
+The options are `nim`, `go` and `rust`
 
 ```
-just all
-```
-
-With `make`
-
-```
-make all
+./gen.sh all IP PORT
 ```
 
 ### Usage
@@ -56,3 +49,8 @@ Start the http listener
 ```
 mtls -l 8443
 ```
+
+---
+
+
+Thank you Tyler for inspiring me for this repo https://github.com/TeneBrae93/defender_bypass_with_sliver/blob/main/builder.py
