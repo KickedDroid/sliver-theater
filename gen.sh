@@ -1,7 +1,8 @@
 #!/bin/bash
 
 generate() {
-    # Check if exactly two arguments were passed
+
+    mkdir -p objects/
     if [ "$#" -ne 3]; then
         echo "Usage: <template> <IP> <PORT>"
         return 1
