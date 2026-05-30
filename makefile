@@ -1,10 +1,11 @@
 .PHONY: all go rust nim organize format cleanup
 
-all: replace format rust nim go organize cleanup replace
+all: replace format rust nim go organize replace
 
 go:
 	cd go && GOOS=windows GOARCH=amd64 GOROOT=/usr/lib/go-1.22 go build -o go-stager.exe stager.go
 	cd go && cp go-stager.exe ../
+	rm go/go-stager.exe
 
 rust:
 	cd rust/stager && cargo build --release --target x86_64-pc-windows-gnu
@@ -13,6 +14,7 @@ rust:
 nim:
 	nim c -d:mingw --os:windows --cpu:amd64 --cc:gcc --gcc.exe:x86_64-w64-mingw32-gcc --gcc.linkerexe:x86_64-w64-mingw32-gcc nim/stager.nim
 	cp nim/stager.exe ./nim-stager.exe
+	rm nim/stager.exe
 
 organize:
 	mkdir -p objects
