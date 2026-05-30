@@ -15,6 +15,12 @@ make
 
 ### Usage
 
+Edit the target in `config.conf`
+
+```
+TARGET=IP:PORT
+```
+
 #### Sliver Listeners
 
 ##### HTTP with mTLS
